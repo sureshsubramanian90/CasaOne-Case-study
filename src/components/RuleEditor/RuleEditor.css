@@ -1,0 +1,6 @@
+.bottomBtnCont{
+    margin-top: 30px;
+    & .errorMessage{
+        color: red
+    }
+}

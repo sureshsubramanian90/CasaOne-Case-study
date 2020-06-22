@@ -1,0 +1,23 @@
+.ruleRowCont{
+    width: 100%;
+    margin: 0 auto;
+    & .ruleRowCatCont{
+        width: 203px;
+        display: inline-block;
+    }
+    & .ruleRowRuleCont{
+        width: 238px;
+        display: inline-block;
+    }
+    & .ruleRowValCont{
+        width: 206px;
+        display: inline-block;
+        vertical-align: top;
+    }
+    & .ruleRowBtnCont{
+        width: 50px;
+        display: inline-block;
+        margin-left: 40px;
+        vertical-align: top;
+    }
+}

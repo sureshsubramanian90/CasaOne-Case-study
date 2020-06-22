@@ -1,0 +1,13 @@
+@import "../core/grid.css";
+@import "../core/color.css";
+@import "../core/base.css";
+
+.mainContainer{
+    margin: 0 auto;
+    & .headerContainer{
+        & .logo{
+            width: 116px;
+            height: 46px;
+        }
+    }
+}

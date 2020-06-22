@@ -1,0 +1,12 @@
+export const GET_DATA = 'GET_DATA';
+export const GET_DATA_SUCCESS = 'GET_DATA_SUCCESS';
+export const GET_DATA_ERROR = 'GET_DATA_ERROR';
+
+export const INIT_NEW_RULE = 'INIT_NEW_RULE';
+export const UPDATE_FOCUSED_RULE = 'UPDATE_FOCUSED_RULE';
+export const ADD_NEW_RULE = 'ADD_NEW_RULE';
+export const DELETE_RULE = 'DELETE_RULE';
+export const EDIT_RULE = 'EDIT_RULE';
+export const DELETE_RULE_FROM_LIST = 'DELETE_RULE_FROM_LIST';
+export const TOGGLE_EDIT_MODAL = 'TOGGLE_EDIT_MODAL';
+export const SUBMIT_DATA = 'SUBMIT_DATA';

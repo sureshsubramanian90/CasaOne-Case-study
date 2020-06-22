@@ -1,0 +1,26 @@
+.mulValCont{
+    position: relative;
+    width: 48%;
+    display: inline-block;
+    & .mulCloseBtn{
+        position: absolute;
+        border: none;
+        background: transparent;
+        right: 16px;
+        font-size: 19px;
+        top: -3px;
+    }
+    & .mulValAdCont{
+        width: 100%;
+        & .mulValInpCont{
+            width: 75%;
+            display: inline-block;
+        }
+        & .mulValAdbtnCont{
+            width: 20%;
+            margin-left: 3px;
+            float: right;
+            display: inline-block;
+        }
+    }
+}
