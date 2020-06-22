@@ -1,3 +1,5 @@
+@import "../core/breakpoint.css";
+
 .mulValCont{
     position: relative;
     width: 48%;
@@ -9,9 +11,14 @@
         right: 16px;
         font-size: 19px;
         top: -3px;
+        @media (--viewport-sm) {
+            top: 0;
+            right: 28px;
+        }
     }
     & .mulValAdCont{
         width: 100%;
+        margin-bottom: 5px;
         & .mulValInpCont{
             width: 75%;
             display: inline-block;

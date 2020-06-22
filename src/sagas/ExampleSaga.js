@@ -53,12 +53,15 @@ function* submitSaga(action) {
   }
 }
 
-function* deleteSaga() {
+function* deleteSaga(action) {
   try {
+    const { payload } = action;
     const value = yield select(storeData);
+    const storedata = get(value, 'rulesList', {});
     const params = {
-      id: get(value, 'focusedRule.currentId', ''),
+      id: storedata[payload.index].id,
     }
+    console.log(params);
     const result = yield call(exampleApi.deleteData, params);
     if (result.isSuccess) {
       yield put({ type: GET_DATA_SUCCESS, data });

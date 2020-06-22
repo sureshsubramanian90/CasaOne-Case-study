@@ -1,4 +1,5 @@
 @import "../core/color.css";
+@import "../core/breakpoint.css";
 
 .modalOverlay{
     width: 100%;
@@ -31,23 +32,16 @@ padding: 32px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     
     @media (--viewport-sm), (--viewport-classic-sm) {
-    position: fixed;
-    top: 0;
-    -webkit-transform: translate(0%,0%);
-    left: 0;
-    width: 100%;
-    box-shadow: none;
-    background: var(--color-light-gray);
-    max-height: 100%;
+    width: 70%
     }
     
-    @media (--viewport-lg) {
+    /* @media (--viewport-lg) {
     width: 644px;
     }
     
     @media (--viewport-xl) {
     width: 644px;
-    }
+    } */
     
     & .modalCloseButton {
     background: none;
@@ -70,7 +64,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     float: right;
     position: absolute;
     top: 7px;
-    left: 0px;
+    right: 11px;
     z-index: 999;
     margin: 0;
     padding: 0;
@@ -87,7 +81,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     @media (--viewport-sm), (--viewport-classic-sm) {
     overflow-y: auto;
     max-height: calc(100vh - 25px);
-    margin-top: 36px;
+    /* margin-top: 36px; */
     -webkit-overflow-scrolling: touch;
     background: var(--color-white);
     }

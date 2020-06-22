@@ -33,13 +33,13 @@ export const data = [
                     minPlaceHolder: "Min Order total",
                     maxPlaceHolder: "Max Order total"
                 },
-                value: ["1234", "456"]
+                value: ["12", "45"]
             }
         ]
     },
     {
         id: 12345,
-        createdBy: "Suresh Subramanian",
+        createdBy: "Praveen Ganesh",
         data: [
             {
                 catagorey: {
@@ -71,13 +71,13 @@ export const data = [
                     minPlaceHolder: "Min Order total",
                     maxPlaceHolder: "Max Order total"
                 },
-                value: ["1234", "456"]
+                value: ["1", "4"]
             }
         ]
     },
     {
         id: 12346,
-        createdBy: "Suresh Subramanian",
+        createdBy: "Mark Warhaul",
         data: [
             {
                 catagorey: {
@@ -92,7 +92,7 @@ export const data = [
                     componentType: "input",
                     placeHolder: 'Product Id',
                 },
-                value: ["1234", "4566", "25235"]
+                value: ["12345678", "12345679", "12345670"]
             },
             {
                 catagorey: {
@@ -110,7 +110,7 @@ export const data = [
                     maxPlaceHolder: "Max Age",
                     lengthLimit: 2,
                 },
-                value: ["1234", "456"]
+                value: ["12", "46"]
             }
         ]
     }

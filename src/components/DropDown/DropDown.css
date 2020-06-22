@@ -1,3 +1,5 @@
+@import "../core/breakpoint.css";
+
 .dropDownCont {
     text-align: left;
     border-radius: 6px;
@@ -6,6 +8,9 @@
     height: 48px;
     width: 90%;
     position: relative;
+    @media (--viewport-sm) {
+        width: 99%;
+    }
     &:before{
         content: "";
         border-left: 5px solid transparent;

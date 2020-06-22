@@ -18,12 +18,15 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      modalTitle: "Add you rule",
+      deleteModalTitle: "Are you sure you want to delete?",
+      showDeleteModal: false,
+      deleteId: ''
     };
     this.showRuleModal = this.showRuleModal.bind(this);
     this.onModalClose = this.onModalClose.bind(this);
     this.onEditRule = this.onEditRule.bind(this);
     this.onDeleteRule = this.onDeleteRule.bind(this);
+    this.onDeleteModalClose = this.onDeleteModalClose.bind(this);
   }
 
   static propTypes = {
@@ -49,11 +52,25 @@ class Home extends Component {
     this.props.actions.editRule({index})
   }
 
-  onDeleteRule = (e, index) => {
-    this.props.actions.deleteRuleList({index})
+  onDeleteRule = () => {
+    this.props.actions.deleteRuleList({ index: this.state.deleteId })
+  }
+
+  onDeleteModalClose = () => {
+    this.setState({
+      showDeleteModal: false,
+      deleteId: '',
+    })
+  }
+  onshowDeleteModal = (e, index) => {
+    this.setState({
+      showDeleteModal: true,
+      deleteId: index,
+    })
   }
   render() {
     const { data, showEditModal, showAddModal, serviceError } = this.props;
+    const { deleteModalTitle, showDeleteModal } = this.state;
     let showModal = false;
     let modalTitle = 'Add Rule';
     if (showEditModal) {
@@ -78,12 +95,12 @@ class Home extends Component {
                   <th className={cx('col2')}>Actions</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className={cx("tableBody")}>
                 {data && data.map((item, index) => <RulesList
                   data={item}
                   index={index}
                   onEdit={this.onEditRule}
-                  onDelete={this.onDeleteRule} />)}
+                  onDelete={this.onshowDeleteModal} />)}
               </tbody>
             </table>
           </div>
@@ -97,6 +114,16 @@ class Home extends Component {
                 onClose={this.onModalClose}
                 isEdit={showEditModal}
               />
+          </Modal>}
+          {showDeleteModal && <Modal
+            title={deleteModalTitle}
+            showModal
+            onClose={this.onDeleteModalClose}
+          >
+            <div className={cx("deleteModal")}>
+              <Button btnType="btn-primary" onClickEvent={this.onDeleteRule} text="Delete" />
+              <Button btnType="btn-secondary-1" onClickEvent={this.onDeleteModalClose} text="cancel" />
+            </div>
           </Modal>}
         </div>
       </Layout>

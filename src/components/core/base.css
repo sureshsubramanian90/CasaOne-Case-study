@@ -1,5 +1,6 @@
 @import "./font.css";
 @import "./color.css";
+@import "./breakpoint.css";
 
 body {
     height: 100vh;
@@ -33,4 +34,64 @@ input{
     -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+}
+
+@media (--viewport-sm) {
+    .visibleMd {
+        display: none
+    }
+    .visibleLg {
+        display: none
+    }
+    .visibleXl {
+        display: none
+    }
+    .hiddenSm {
+        display: none
+    }
+}
+/* Medium breakpoints */
+@media (--viewport-md) {
+    .visibleSm {
+        display: none
+    }
+    .visibleLg {
+        display: none
+    }
+    .visibleXl {
+        display: none
+    }
+    .hiddenMd {
+        display: none
+    }
+}
+/* Large breakpoints */
+@media (--viewport-lg) {
+    .visibleSm {
+        display: none
+    }
+    .visibleMd {
+        display: none
+    }
+    .visibleXl {
+        display: none
+    }
+    .hiddenLg {
+        display: none
+    }
+}
+/* Extra Large */
+@media (--viewport-xl) {
+    .visibleSm {
+        display: none
+    }
+    .visibleMd {
+        display: none
+    }
+    .visibleLg {
+        display: none
+    }
+    .hiddenXl {
+        display: none
+    }
 }

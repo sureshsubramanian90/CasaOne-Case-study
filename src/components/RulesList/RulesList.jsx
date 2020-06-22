@@ -20,15 +20,19 @@ export const RulesList = (props) => {
     }
     return (
         <tr className={cx("tableRow", "row")}>
-            <td className={cx('col1', 'colPadding')}>{sNo += 1}</td>
-            <td className={cx('col2')}>{data.id}</td>
-            <td className={cx('col4')}>
+            <td className={cx('col1', 'sm12', 'colPadding', 'sno')}>{sNo += 1}</td>
+            <td className={cx('sm4', 'visibleSm', 'mobLabel')}>ID</td>
+            <td className={cx('col2', 'sm12', 'mobData')}>{data.id}</td>
+            <td className={cx('sm4', 'visibleSm', 'mobLabel')}>Description</td>
+            <td className={cx('col4', 'sm12', 'mobData')}>
                 {
                     data.data.map((value) => renderDes(value))
                 }
             </td>
-            <td className={cx('col3')}>{data.createdBy}</td>
-            <td className={cx('col2')}>
+            <td className={cx('sm4', 'visibleSm', 'mobLabel')}>Created By</td>
+            <td className={cx('col3', 'sm12', 'mobData')}>{data.createdBy}</td>
+            <td className={cx('sm4', 'visibleSm', 'mobLabel')}>Actions</td>
+            <td className={cx('col2', 'sm12', 'mobData')}>
                 <Button onClickEvent={(e) => {onEdit(e, index)}} text="Edit" btnType="btn-secondary"/>
                 <Button onClickEvent={(e) => {onDelete(e, index)}} text="Delete" btnType="btn-secondary"/>
             </td>

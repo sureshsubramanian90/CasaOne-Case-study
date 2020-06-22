@@ -48,9 +48,9 @@ class RuleEditor extends Component {
               )}
             </React.Fragment>
             <div className={cx('bottomBtnCont')}>
+                <Button btnType="btn-secondary-1" disabled={!focusedRule.enableSaveButton} onClickEvent={this.addAnotherRowEvent} text="Add another" />
                 <Button disabled={!focusedRule.enableSaveButton} onClickEvent={this.submitEvent} text="Save" />
-                <Button disabled={!focusedRule.enableSaveButton} onClickEvent={this.addAnotherRowEvent} text="Add another" />
-                <Button onClickEvent={onClose} text="Cancel" />
+                <Button btnType="btn-secondary-1" onClickEvent={onClose} text="Cancel" />
                 {errorMessage && <p className={cx('errorMessage')}>{errorMessage}</p>}
             </div>
           </div>

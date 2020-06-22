@@ -1,9 +1,40 @@
 @import "../core/color.css";
+@import "../core/breakpoint.css";
+@import "../core/base.css";
 
 .tableRow{
     border-bottom: 1px solid var(--color-gray1);
     text-align: left;
+    @media (--viewport-sm) {
+        display: block;
+        margin: 10px;
+    }
+    & .sno{
+        @media (--viewport-sm) {
+            display: none;
+        }
+    }
     & .colPadding{
         padding-left: 30px;
+        @media (--viewport-md) {
+            padding-left: 11px;
+        }
+        @media (--viewport-sm) {
+            padding-left: 0;
+        }
+    }
+    & .mobLabel{
+        @media (--viewport-sm) {
+            width: 30%;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
+    & .mobData{
+        @media (--viewport-sm) {
+            width: 70%;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
     }
 }

@@ -1,3 +1,4 @@
+@import "../core/breakpoint.css";
 .inputCont{
     border: 1px solid #d8d8d8;
     height: 48px;
@@ -7,5 +8,8 @@
     color: #111;
     caret-color: #111;
     -webkit-appearance: none;
-    width: 100%
+    width: 100%;
+    @media (--viewport-sm) {
+        width: 97%;
+    }
 }

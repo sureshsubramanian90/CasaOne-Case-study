@@ -1,6 +1,7 @@
 @import "../../../components/core/color.css";
 @import "../../../components/core/base.css";
 @import "../../../components/core/font.css";
+@import "../../../components/core/breakpoint.css";
 
 .rulesContainer {
     background-color: var(--color-white);
@@ -8,6 +9,9 @@
     margin: 0 auto;
     border-radius: 5px;
     padding: 20px;
+    @media (--viewport-md) {
+        width: 700px;
+    }
     & .rules-heading{
         font-family: var(----primary-font);
     }
@@ -22,15 +26,36 @@
             border: 1px solid var(--color-gray1);
             & .tableHead{
                 background-color: var(--color-sanal1);
+                @media (--viewport-sm) {
+                    display: none;
+                }
                 & .tableRow{
                     height: 60px;
                     border: 1px solid black;
                     text-align: left;
                     & .colPadding{
                         padding-left: 30px;
+                        @media (--viewport-md) {
+                            padding-left: 11px;
+                        }
                     }
                 }
             }
+            & .tableBody{
+                @media (--viewport-sm) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.deleteModal{
+    text-align: center;
+    & button{
+        margin-left: 10px;
+        @media (--viewport-sm) {
+            margin-left: 0;
         }
     }
 }

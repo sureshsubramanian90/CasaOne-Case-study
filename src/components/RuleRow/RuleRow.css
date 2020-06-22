@@ -1,23 +1,44 @@
+@import "../core/breakpoint.css";
+@import "../core/color.css";
+
 .ruleRowCont{
     width: 100%;
     margin: 0 auto;
+    @media (--viewport-sm) {
+        border-bottom: 1px solid var(--color-gray1);
+        margin-bottom: 17px;
+    }
     & .ruleRowCatCont{
         width: 203px;
         display: inline-block;
+        @media (--viewport-sm) {
+            width: 99%;
+        }
     }
     & .ruleRowRuleCont{
         width: 238px;
         display: inline-block;
+        @media (--viewport-sm) {
+            width: 99%;
+        }
     }
     & .ruleRowValCont{
         width: 206px;
         display: inline-block;
         vertical-align: top;
+        @media (--viewport-sm) {
+            width: 99%;
+        }
     }
     & .ruleRowBtnCont{
         width: 50px;
         display: inline-block;
-        margin-left: 40px;
+        margin-left: 18px;
         vertical-align: top;
+        @media (--viewport-sm) {
+            width: 100%;
+            margin: 10px 0;
+            text-align: right;
+        }
     }
 }

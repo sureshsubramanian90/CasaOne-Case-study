@@ -1,5 +1,14 @@
+@import "../core/breakpoint.css";
+
 .bottomBtnCont{
     margin-top: 30px;
+    & button{
+        margin-left: 5px;
+        @media (--viewport-sm) {
+            margin-left: 0;
+        }
+    }
+    
     & .errorMessage{
         color: red
     }
